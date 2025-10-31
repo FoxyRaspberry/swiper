@@ -20,14 +20,24 @@ body {
 body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
-  background: #000;
+  background: linear-gradient(135deg, #054c76,#0c192a,#471c3a);
   color: #fff;
 }
 
 .swipers-container {
   display: flex;
+  align-items: center;
+  flex-direction: column;
   gap: 8px;
+  justify-content: center;
   height: 100%;
+}
+
+@media (1200px > width) {
+  .swiper-slide {
+    padding: 2px 12px;
+    font-style: italic;
+  }
 }
 
 .swiper-button-prev,
@@ -36,6 +46,10 @@ body {
 }
 
 @media (1200px <=width) {
+  .swipers-container {
+    flex-direction: row;
+  }
+
   .swiper {
     width: 100%;
     height: 100%;
@@ -50,15 +64,15 @@ body {
   }
 
   .swiper-1 .swiper-slide {
-    background: #444;
+    background: #4444;
   }
 
   .swiper-2 .swiper-slide {
-    background: #555;
+    background: #5555;
   }
 
   .swiper-3 .swiper-slide {
-    background: #666;
+    background: #6666;
   }
 
   .swiper-button-prev,
