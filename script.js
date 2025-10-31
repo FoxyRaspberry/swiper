@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   let swipers = [];
   let swipersAreInitialized = false;
+  const [swaperCSSLinkElement] = document.getElementsByClassName('js-swiper-css-link');
 
   initApp();
 
@@ -28,10 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
       swiper.destroy();
     });
 
+    swaperCSSLinkElement.setAttribute('disabled', true);
+
     swipersAreInitialized = false;
   }
 
   function initSwipers() {
+    swaperCSSLinkElement.removeAttribute('disabled');
+
     swipersCheck = new Swiper('.swiper', {
       loop: true,
       navigation: {
