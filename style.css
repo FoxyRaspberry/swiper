@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+@media (1200px <=width) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: flex;
+  }
+}
